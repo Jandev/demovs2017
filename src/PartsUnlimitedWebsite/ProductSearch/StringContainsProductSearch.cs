@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Ajax.Utilities;
 using PartsUnlimited.Models;
 
 namespace PartsUnlimited.ProductSearch
@@ -36,6 +37,10 @@ namespace PartsUnlimited.ProductSearch
 
 		public string Depluralize(string query)
 		{
+		    if (string.IsNullOrEmpty(query))
+		    {
+		        return query;
+		    }
 			if (query.EndsWith("ies"))
 			{
 				query = query.Substring(0, query.Length - 3) + "y";
@@ -46,7 +51,7 @@ namespace PartsUnlimited.ProductSearch
 			}
 			else if (query.EndsWith("s"))
 			{
-				query = query.Substring(1, query.Length);
+				query = query.Substring(1, query.Length -1);
 			}
 			return query.ToLowerInvariant();
 		}
