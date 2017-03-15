@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using PartsUnlimited.Models;
+using PartsUnlimited.ViewModels;
 
 namespace PartsUnlimited.ProductSearch
 {
@@ -17,7 +18,7 @@ namespace PartsUnlimited.ProductSearch
         }
 
 		// TODO: Change this to return List of ProductViewModel?
-        public async Task<IEnumerable<Product>> Search(string query)
+        public async Task<IEnumerable<ProductViewModel>> Search(string query)
         {
 			try
 			{
@@ -26,11 +27,19 @@ namespace PartsUnlimited.ProductSearch
 				var q = _context.Products
 					.Where(p => p.Title.ToLower().Contains(cleanQuery));
 
-				return await q.ToListAsync();
+			    var productViewModelCollection = new List<ProductViewModel>();
+			    foreach (var product in q)
+			    {
+                    productViewModelCollection.Add(new ProductViewModel
+                    {
+                        Product = product
+                    });
+			    }
+			    return productViewModelCollection;
 			}
 			catch
 			{
-				return new List<Product>();
+				return new List<ProductViewModel>();
 			}
         }
 
