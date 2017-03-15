@@ -20,18 +20,5 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
-  <ItemGroup>
-    <Validate Include="DependencyValidation1.layerdiagram">
-      <SubType>Content</SubType>
-    </Validate>
-    <Validate Include="DependencyValidation1.layerdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>DependencyValidation1.layerdiagram</DependentUpon>
-    </Validate>
-    <Validate Include="DependencyValidation1.layerdiagram.suppressions">
-      <SubType>Content</SubType>
-      <DependentUpon>DependencyValidation1.layerdiagram</DependentUpon>
-    </Validate>
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
