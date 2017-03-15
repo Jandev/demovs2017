@@ -24,8 +24,8 @@ namespace PartsUnlimited.ProductSearch
 			{
 				var cleanQuery = Depluralize(query);
 
-				var q = _context.Products
-					.Where(p => p.Title.ToLower().Contains(cleanQuery));
+				var q = await _context.Products
+					.Where(p => p.Title.ToLower().Contains(cleanQuery)).ToListAsync();
 
 			    var productViewModelCollection = new List<ProductViewModel>();
 			    foreach (var product in q)
