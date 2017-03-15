@@ -25,7 +25,7 @@ namespace PartsUnlimited.ProductSearch
 				var cleanQuery = Depluralize(query);
 
 				var q = _context.Products
-					.Where(p => p.Title.Contains(cleanQuery));
+					.Where(p => p.Title.ToLowerInvariant().Contains(cleanQuery));
 
 				return await q.ToListAsync();
 			}
@@ -51,7 +51,7 @@ namespace PartsUnlimited.ProductSearch
 			}
 			else if (query.EndsWith("s"))
 			{
-				query = query.Substring(1, query.Length);
+				query = query.Substring(1, query.Length - 1);
 			}
 			return query.ToLowerInvariant();
 		}
