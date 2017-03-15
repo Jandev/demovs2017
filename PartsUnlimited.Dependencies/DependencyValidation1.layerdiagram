@@ -6,6 +6,9 @@
         <dependencyFromLayerToLayer Id="139c0dcb-2000-4748-863f-85497821e7f1" direction="Forward">
           <layerMoniker Id="0f711122-a05e-4a9f-af74-35a599264e44" />
         </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b43addbf-2a76-46ff-b7ce-e908f350147c" direction="Forward">
+          <layerMoniker Id="451db54a-d748-4302-9921-da14d7d86bd6" />
+        </dependencyFromLayerToLayer>
       </dependencyToLayers>
       <references>
         <reference Id="49d20740-f884-46be-92fd-f7f49cdf55d9" name="PartsUnlimited.Controllers">
