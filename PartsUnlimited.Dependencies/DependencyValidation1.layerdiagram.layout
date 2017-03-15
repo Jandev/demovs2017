@@ -1,4 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<layerDiagram dslVersion="1.0.0.0" Id="dc75e431-23ff-468d-a7ee-b7959fa51460" absoluteBounds="0, 0, 11, 8.5" name="DependencyValidation1">
+<layerDiagram dslVersion="1.0.0.0" Id="dc75e431-23ff-468d-a7ee-b7959fa51460" absoluteBounds="0, 0, 11.875, 8.5" name="DependencyValidation1">
   <layerModelMoniker Id="0c3e5e49-224e-4d51-8981-699adac496e2" />
+  <nestedChildShapes>
+    <layerShape Id="bc3d1450-ea3b-43b3-96eb-d48759dd8078" absoluteBounds="9.625, 3, 2, 0.75" customColor="192, 192, 255">
+      <layerMoniker Id="fe452e57-a66c-4cf6-be3a-0a31cce2b170" />
+    </layerShape>
+    <layerShape Id="807116b6-ed71-469a-9167-78394e1842da" absoluteBounds="3.875, 3.125, 3, 0.75" customColor="255, 128, 128">
+      <layerMoniker Id="451db54a-d748-4302-9921-da14d7d86bd6" />
+    </layerShape>
+    <layerShape Id="78b5f700-4699-459e-8488-56666ddc79de" absoluteBounds="9.625, 5.375, 2, 0.75" customColor="224, 224, 224">
+      <layerMoniker Id="0f711122-a05e-4a9f-af74-35a599264e44" />
+    </layerShape>
+    <dependencyConnector edgePoints="[(10.625 : 3.75); (10.625 : 5.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+      <dependencyFromLayerToLayerMoniker Id="139c0dcb-2000-4748-863f-85497821e7f1" />
+      <nodes>
+        <layerShapeMoniker Id="bc3d1450-ea3b-43b3-96eb-d48759dd8078" />
+        <layerShapeMoniker Id="78b5f700-4699-459e-8488-56666ddc79de" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
 </layerDiagram>
